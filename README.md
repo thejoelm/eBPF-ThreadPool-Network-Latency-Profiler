@@ -112,7 +112,7 @@ threadpool.enqueue([clientFd, epollFd, enqueueDelta]() {
 
 **Actual Profiler Output during Flaw Injection:**
 
-delta 110750ns  (110.75 us)
+delta 54683469ns  (54683.5 us)
 
 
 This test successfully proves the telemetry pipeline is correct. Because the packet landed in the socket buffer but sat unconsumed while the worker thread was stalled, the profiler isolated and reported the exact 50ms queuing delay.
